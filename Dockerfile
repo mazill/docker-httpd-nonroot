@@ -11,6 +11,7 @@ RUN yum -y install httpd
 
 USER apache
 
-/usr/sbin/httpd
-
 EXPOSE 80
+
+CMD ["/usr/sbin/httpd"]
+
