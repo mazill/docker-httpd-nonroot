@@ -9,6 +9,8 @@ RUN yum -y update
 RUN yum -y install httpd
 
 
-USER default
+USER apache
 
 /usr/sbin/httpd
+
+EXPOSE 80
