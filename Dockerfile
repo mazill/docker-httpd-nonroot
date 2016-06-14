@@ -3,13 +3,10 @@ FROM centos:6.7
 MAINTAINER "Matthias Zillmann"
 
 USER root
-
-RUN yum -y update 
-
-RUN yum -y install httpd
+RUN yum -y update && yum -y install httpd
 
 
-USER apache
+USER 1001
 
 EXPOSE 80
 
