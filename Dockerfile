@@ -41,7 +41,7 @@ RUN	chown -R 1001:0 ${HOME} && \
 
 WORKDIR ${HOME}
 	
-VOLUME ["/var/www", "/var/log/httpd", "/etc/httpd"]
+#VOLUME ["/var/www", "/var/log/httpd", "/etc/httpd"]
 
 # EXEC
 ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
