@@ -31,8 +31,11 @@ EXPOSE 8080
 # get rid of the root user and set permissons	
 RUN	chown -R 1001:0 ${HOME} && \
 	chmod -R ug+rwx ${HOME} && \
+	mkdir -p /run/httpd && \
         chown -R 1001:0 /run/httpd/ && \
+	mkdir -p /var/www && \
 	chown -R 1001:0 /var/www && \
+	mkdir -p /var/log/httpd && \
         chown -R 1001:0 /var/log/httpd && \
         chown -R 1001:0 /etc/httpd
 
