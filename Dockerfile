@@ -35,9 +35,11 @@ RUN	chown -R 1001:0 ${HOME} && \
         chown -R 1001:0 /run/httpd/ && \
 	mkdir -p /var/www && \
 	chown -R 1001:0 /var/www && \
+	mkdir -p /etc/httpd/logs/ && \
+        chown -R 1001:0 /etc/httpd && \
 	mkdir -p /var/log/httpd && \
-        chown -R 1001:0 /var/log/httpd && \
-        chown -R 1001:0 /etc/httpd
+        chown -R 1001:0 /var/log/httpd 
+
 
 WORKDIR ${HOME}
 	
