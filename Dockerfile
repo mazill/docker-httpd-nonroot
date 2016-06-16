@@ -25,7 +25,9 @@ RUN \
 RUN getent passwd 1001 || useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin -c "Default Application User" default
 
 # Ports
-COPY httpd/ /etc/httpd/
+COPY httpd/conf/ /etc/httpd/conf/
+COPY httpd/conf.d/ /etc/httpd/conf.d/
+COPY httpd/conf.modules.d/ /etc/httpd/conf.modules.d/
 EXPOSE 8080
 
   
