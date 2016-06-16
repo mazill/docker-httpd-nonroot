@@ -26,7 +26,6 @@ RUN getent passwd 1001 || useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin -c
 
 # Ports
 COPY httpd/ /etc/httpd/
-RUN ln -s /etc/httpd/* ${HOME}/
 EXPOSE 8080
 
   
