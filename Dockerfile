@@ -38,14 +38,15 @@ RUN	chown -R 1001:0 ${HOME} && \
 	chown -R 1001:0 /var/www && \
         chown -R 1001:0 /etc/httpd && \
 	mkdir -p /var/log/httpd && \
-        chown -R 1001:0 /var/log/httpd 
+        chown -R 1001:0 /var/log/httpd && \
+	chmod -R ug+rwx /var/log/httpd
 
 
 WORKDIR ${HOME}
 	
 #VOLUME ["/var/www", "/var/log/httpd", "/etc/httpd"]
 
+USER 1001
 # EXEC
 ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
-USER 1001
