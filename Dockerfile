@@ -1,4 +1,4 @@
-FROM openshift/base-centos7
+FROM centos:centos7
 
 RUN yum -y update && yum clean all
 ENV HOME=/opt/app-root/src 
