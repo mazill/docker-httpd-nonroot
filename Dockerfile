@@ -34,8 +34,10 @@ RUN	chown -R 1001:0 ${HOME} && \
 	chmod -R ug+rwx ${HOME} && \
 	mkdir -p /run/httpd && \
         chown -R 1001:0 /run/httpd/ && \
+        chmod -R ug+rwx /run/httpd/ && \
 	mkdir -p /var/www && \
 	chown -R 1001:0 /var/www && \
+	chmod -R ug+rwx /var/www && \
         chown -R 1001:0 /etc/httpd && \
 	mkdir -p /var/log/httpd && \
         chown -R 1001:0 /var/log/httpd && \
